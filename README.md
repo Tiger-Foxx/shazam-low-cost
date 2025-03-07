@@ -21,6 +21,7 @@ Bon, soyons honnêtes, c'est surtout un **prétexte pour tester des concepts en 
 1. **Spectrogramme Express** 🎨
    - À partir de n'importe quel fichier audio (*mp3, wav*), on génère son **spectrogramme** pour les **30 premières secondes**.
    - On enregistre l'image du spectrogramme (ça sert à rien mais c'est joli).
+![Spectrogram](images/1.jpg)
 
 2. **Extraction de Features** 🧐
    - On analyse le spectrogramme pour récupérer des **données intéressantes** comme le **centroïde spectral**, la **bande passante**, le **contraste spectral**, etc.
