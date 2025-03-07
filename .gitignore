@@ -1,0 +1,25 @@
+# Ignorer les fichiers audio et spectrogrammes
+*.wav
+*.mp3
+*.flac
+*.ogg
+Task _5_ Data/
+
+# Ignorer les fichiers de logs et caches
+*.log
+*.tmp
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# Ignorer les fichiers spécifiques aux environnements virtuels
+venv/
+.env
+
+# Ignorer les notebooks Jupyter si tu en utilises
+*.ipynb_checkpoints
+
+# Ignorer les fichiers de configuration utilisateur (si tu en as)
+config.json
+settings.json

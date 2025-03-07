@@ -1,0 +1,24 @@
+{
+    "features": {
+        "spectral_centroid_mean": 2083.7501909127354,
+        "spectral_bandwidth_mean": 1788.244623097214,
+        "spectral_contrast_mean": 9.47337654335999,
+        "spectral_rolloff_mean": 3636.1890665384385,
+        "tonnetz_mean": 0.0038500354217789827,
+        "zero_crossing_rate_mean": 0.0,
+        "mfcc_0_mean": -636.6163330078125,
+        "mfcc_1_mean": 137.10035705566406,
+        "mfcc_2_mean": -4.818348407745361,
+        "mfcc_3_mean": 11.399081230163574,
+        "mfcc_4_mean": -7.984819412231445,
+        "mfcc_5_mean": 5.629896640777588,
+        "mfcc_6_mean": -9.051141738891602,
+        "mfcc_7_mean": 17.616254806518555,
+        "mfcc_8_mean": 8.66280746459961,
+        "mfcc_9_mean": 18.659040451049805,
+        "mfcc_10_mean": 6.851496696472168,
+        "mfcc_11_mean": 2.54036808013916,
+        "mfcc_12_mean": -1.7622133493423462
+    },
+    "phash": "02f2d14f2c294e9ce8b690e6bc11d391fd403306d60cec9a50e9da7734683f7b"
+}
