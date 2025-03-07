@@ -1,6 +1,6 @@
 # 🎵 Shazam Low-Cost: Le Shazam du Pauvre 🤡
 
-![Shazam Logo](PLACEHOLDER_FOR_SHAZAM_LOGO)
+![Shazam Logo](images/SHLOW.jpg)
 
 > **Pourquoi payer pour reconnaître une chanson quand on peut galérer gratuitement ?**
 
@@ -29,11 +29,13 @@ Bon, soyons honnêtes, c'est surtout un **prétexte pour tester des concepts en 
 3. **Reconnaissance de Musique** 🔍
    - On compare l'empreinte audio avec celles stockées dans notre base de données.
    - On affiche les **musiques les plus similaires** avec un **score de similarité**.
+![Capture d'écran](screenshots/4.png)
 
 4. **Fusion Audio Low-Cost™** 🎚️
    - Sélectionnez **deux fichiers audio**.
    - Créez un **mélange pondéré** des deux fichiers.
    - Générez une **nouvelle empreinte audio** et trouvez les morceaux qui s'en rapprochent.
+![Capture d'écran](screenshots/5.png)
 
 ---
 
@@ -41,7 +43,14 @@ Bon, soyons honnêtes, c'est surtout un **prétexte pour tester des concepts en 
 
 L'interface est développée avec **PyQt** pour un affichage simple et fonctionnel (on a essayé de ne pas faire moche). Voici à quoi ça ressemble :
 
-![Capture d'écran](PLACEHOLDER_FOR_SCREENSHOT)
+![Capture d'écran](screenshots/1.png)
+
+---
+![Capture d'écran](screenshots/2.png)
+
+---
+![Capture d'écran](screenshots/3.png)
+
 
 ---
 

@@ -6,15 +6,15 @@ import json
 import hashlib
 import os
 
-# Récupère le chemin absolu du répertoire contenant le script actuel
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 class SpectrogramGenerator:
     def __init__(self, data_path):
         self.data_path = data_path
-        # self.output_path = os.path.join('/Users/macbook/Documents/DSP_tasks/Task_5', "fingerprints")
+
         self.output_path = os.path.join(BASE_DIR, "fingerprints")
-        # self.spectrogram_path = os.path.join('/Users/macbook/Documents/DSP_tasks/Task_5', "spectrograms")
+
         self.spectrogram_path = os.path.join(BASE_DIR, "spectrograms")
         if not os.path.exists(self.output_path):
             os.makedirs(self.output_path)
@@ -35,25 +35,25 @@ class SpectrogramGenerator:
         """
         features = {}
         try:
-            # Convert dB spectrogram to amplitude spectrogram
+
             amplitude_spectrogram = librosa.db_to_amplitude(spectrogram)
 
-            # Spectral features
+
             features['spectral_centroid_mean'] = float(np.mean(librosa.feature.spectral_centroid(S=amplitude_spectrogram)))
             features['spectral_bandwidth_mean'] = float(np.mean(librosa.feature.spectral_bandwidth(S=amplitude_spectrogram)))
             features['spectral_contrast_mean'] = float(np.mean(librosa.feature.spectral_contrast(S=amplitude_spectrogram)))
             features['spectral_rolloff_mean'] = float(np.mean(librosa.feature.spectral_rolloff(S=amplitude_spectrogram)))
 
-            # Tonal features
+
             chroma = librosa.feature.chroma_stft(S=amplitude_spectrogram)
             tonnetz = librosa.feature.tonnetz(chroma=chroma)
             features['tonnetz_mean'] = float(np.mean(tonnetz))
 
-            # Temporal features
+
             zero_crossings = librosa.feature.zero_crossing_rate(amplitude_spectrogram)
             features['zero_crossing_rate_mean'] = float(np.mean(zero_crossings))
 
-            # MFCCs
+
             mfcc = librosa.feature.mfcc(S=spectrogram, n_mfcc=13)
             for i in range(mfcc.shape[0]):
                 features[f'mfcc_{i}_mean'] = float(np.mean(mfcc[i, :]))
@@ -85,8 +85,8 @@ class SpectrogramGenerator:
                 if file.endswith('.wav') or file.endswith('.mp3'):
                     file_path = os.path.join(team_folder, file)
                     S_DB = self.generate_spectrogram(file_path)
-                    
-                    # Save spectrogram image in "spectrograms" folder
+
+
                     plt.figure(figsize=(10, 4))
                     librosa.display.specshow(S_DB, sr=22050, x_axis='time', y_axis='mel')
                     plt.colorbar(format='%+2.0f dB')
@@ -95,7 +95,7 @@ class SpectrogramGenerator:
                     spectrogram_filename = os.path.join(self.spectrogram_path, f"{file}.png")
                     plt.savefig(spectrogram_filename)
                     plt.close()
-                    
+
                     features = self.extract_features(S_DB)
                     fingerprint = self.perceptual_hash(features)
                     fingerprint_filename = os.path.join(self.output_path, f"{file}.json")
